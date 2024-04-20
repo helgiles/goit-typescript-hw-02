@@ -21,11 +21,7 @@ interface ImageModalProps {
 
 const ImageModal: React.FC<ImageModalProps> = ({ image, isOpen, onClose }) => {
   return (
-    <Modal
-      overlayClassName={css.overlay}
-      isOpen={isOpen}
-      onRequestClose={onClose}
-    >
+    <Modal className={css.overlay} isOpen={isOpen} onRequestClose={onClose}>
       <div className={css.content} onClick={onClose}>
         {image && (
           <img
@@ -45,6 +41,7 @@ export default ImageModal;
 //   return (
 //     <Modal
 //       className={css.overlay}
+// //    overlayClassName={css.overlay}
 //       isOpen={isOpen}
 //       onClick={event => event.stopPropagation()}
 //       onRequestClose={onClose}

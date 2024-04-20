@@ -1,6 +1,21 @@
 import css from './ImageCard.module.css';
 
-export default function ImageCard({ image, onClick }) {
+interface Image {
+  id: string;
+  title: string;
+  urls: {
+    small: string;
+    regular: string;
+  };
+  alt_description: string;
+}
+
+interface ImageCardProps {
+  image: Image;
+  onClick: () => void;
+}
+
+const ImageCard: React.FC<ImageCardProps> = ({ image, onClick }) => {
   return (
     <div className={css.container} onClick={onClick}>
       <img
@@ -10,4 +25,18 @@ export default function ImageCard({ image, onClick }) {
       />
     </div>
   );
-}
+};
+
+export default ImageCard;
+
+// export default function ImageCard({ image, onClick }) {
+//   return (
+//     <div className={css.container} onClick={onClick}>
+//       <img
+//         className={css.image}
+//         src={image.urls.small}
+//         alt={image.alt_description}
+//       />
+//     </div>
+//   );
+// }

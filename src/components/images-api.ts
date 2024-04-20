@@ -13,7 +13,7 @@ interface Image {
 }
 const fetchImages = async (query: string, page: number): Promise<Image[]> => {
   try {
-    const response: AxiosResponse = await axios.get('/search/photos', {
+    const response: AxiosResponse = await axios.get<Image[]>('/search/photos', {
       params: {
         query,
         page,

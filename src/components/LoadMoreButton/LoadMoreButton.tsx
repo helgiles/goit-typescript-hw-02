@@ -13,11 +13,3 @@ const LoadMoreButton: React.FC<LoadMoreButtonProps> = ({ onClick }) => {
 };
 
 export default LoadMoreButton;
-
-// export default function LoadMoreButton({ onClick }) {
-//   return (
-//     <button className={css.button} onClick={onClick}>
-//       Load more
-//     </button>
-//   );
-// }

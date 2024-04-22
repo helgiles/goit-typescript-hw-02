@@ -9,7 +9,7 @@ import Loader from '../Loader/Loader';
 import ImageModal from '../ImageModal/ImageModal';
 import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
 
-interface Image {
+export interface Image {
   id: string;
   title: string;
   urls: {

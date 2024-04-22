@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import './App.css';
+import { Image } from '../../types';
 import fetchImages from '../images-api';
 import SearchBar from '../SearchBar/SearchBar';
 import ImageGallery from '../ImageGallery/ImageGallery';
@@ -8,16 +9,6 @@ import ErrorMessage from '../ErrorMessage/ErrorMessage';
 import Loader from '../Loader/Loader';
 import ImageModal from '../ImageModal/ImageModal';
 import LoadMoreButton from '../LoadMoreButton/LoadMoreButton';
-
-export interface Image {
-  id: string;
-  title: string;
-  urls: {
-    small: string;
-    regular: string;
-  };
-  alt_description: string;
-}
 
 const App: React.FC = () => {
   const [query, setQuery] = useState<string>('');

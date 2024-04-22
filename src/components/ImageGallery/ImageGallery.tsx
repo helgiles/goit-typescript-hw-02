@@ -1,5 +1,5 @@
 import css from './ImageGallery.module.css';
-import { Image } from '../App/App';
+import { Image } from '../../types';
 import ImageCard from '../ImageCard/ImageCard';
 
 interface ImageGalleryProps {

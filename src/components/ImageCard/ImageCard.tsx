@@ -1,5 +1,5 @@
 import css from './ImageCard.module.css';
-import { Image } from '../App/App';
+import { Image } from '../../types';
 
 interface ImageCardProps {
   image: Image;
